@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited { text-decoration: none; color: #022a46; }
+
+body {
+    background: #ffffff url(images/header-tile-dark.jpg) repeat-x;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+h2 { font-family: Tahoma, Helvetica, Arial, sans-serif; font-weight: normal; }
+
+
+/*#page-outer { background: #ffffff; }*/
+#page {
+    background: #ffffff url(images/bg1-right.jpg) 0 -4px repeat-y;
+    width: 960px;
+    margin: auto;
+}
+
+
+#header {
+    height: 149px;
+    /*background: transparent url(images/bg1-top.png);*/
+    background: transparent url(images/bg-header-short.jpg) no-repeat;
+}
+
+#container {
+    
+    
+}
+
+
+#navigation {
+    height: 91px;
+    background: transparent url(images/nav-bg.jpg) no-repeat;
+}
+
+
+
+
+/* @group nice menu
+  ----------------------*/
+#primary {
+    width: 700px;
+    height: 90px;
+}
+ul.nice-menu, ul.nice-menu ul {
+    background: transparent;
+}
+ul.nice-menu li, ul.nice-menu-down li {
+    background: transparent;
+    border: none;
+}
+ul.nice-menu-down li.menuparent, #header-region ul.nice-menu-down li.menuparent {
+    background: transparent;
+}
+ul.nice-menu { width: 100%; padding-top: 10px; }
+ul.nice-menu li { height: 37px; }
+ul.nice-menu li.menu-item-1 { width: 157px; margin-right: 6px; }
+ul.nice-menu li.menu-item-2 { width: 145px; margin-right: 6px; }
+ul.nice-menu li.menu-item-3 { width: 118px; margin-right: 6px; }
+ul.nice-menu li.menu-item-4 { width: 261px; }
+ul.nice-menu li a { display: block; height: 37px; text-indent: -2000px; padding: 0; }
+ul.nice-menu li.menu-item-1 a { background: #ffffff url(images/menu-blog.jpg) 50% 50% no-repeat; }
+ul.nice-menu li.menu-item-2 a { background: #ffffff url(images/menu-media.jpg) 50% 50% no-repeat; }
+ul.nice-menu li.menu-item-3 a { background: #ffffff url(images/menu-rec.jpg) 50% 50% no-repeat; }
+ul.nice-menu li.menu-item-4 a { background: #ffffff url(images/menu-webdev.jpg) 50% 50% no-repeat; }
+
+ul.nice-menu li.menu-item-3 ul li a { background: transparent; }
+
+ul.nice-menu li.menuparent ul, #header-region ul.nice-menu li.menuparent ul,
+ul.nice-menu li.menuparent ul li {
+    width: 100%;
+}
+ul.nice-menu-down .menuparent a { padding: 0; }
+ul.nice-menu li ul li a { text-indent: 5px; }
+
+
+
+
+
+/* @group main
+  ---------------------*/
+#main {
+    padding: 40px 0 30px 0;
+    min-height: 300px;
+}
+
+
+.views-row-odd, .views-row-even {
+    padding: 50px 0 60px 0;
+    background: transparent url(images/horizontal-divider-brown.jpg) bottom right no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+/* @group panels
+  ------------------------*/
+#main .panel-2col .panel-col-first {
+    width: 700px;
+    background: #ffffff url(images/horizontal-divider-brown.jpg) top right no-repeat;
+    float: left;
+}
+.panel-2col .panel-col-first .inside {
+    /*padding: 10px;*/
+    margin: 0;
+}
+
+
+
+
+
+/* @group node
+  ---------------------*/
+.node .node-left {
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+}
+.node .node-right {
+    float: left;
+    width: 580px;
+}
+.node .content {
+    /*padding-left: 100px;*/
+    clear: both;
+}
+.node .content img {
+    margin: 0 10px 10px;
+    border: 2px solid #222222;
+}
+.node h2 {
+    background: transparent url(images/horizontal-divider-blue.jpg) bottom left no-repeat;
+    margin-bottom: 20px;
+    font-size: 18pt;
+    width: 500px;
+    float: left;
+    padding-bottom: 8px;
+    font-weight: normal;
+}
+h1#page-title { font-weight: normal; margin-bottom: 20px; background: transparent url(images/horizontal-divider-blue.jpg) bottom left no-repeat; }
+.node .meta { padding: 3px 5px; font-size: 8pt; }
+.node .meta a:link,
+.node .meta a:visited {
+    color: #000000;   
+}
+.float-right {
+    float: right;
+}
+
+
+
+
+
+/* @group footer
+  --------------------*/
+#footer-wrapper {
+    height: 100px;
+    background: black;
+    color: white;
+}
