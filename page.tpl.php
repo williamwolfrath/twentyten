@@ -137,8 +137,8 @@
       <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "withprimary"; } if (!empty($secondary_links)) { print " withsecondary"; } ?> ">
         <?php if (!empty($primary_links)): ?>
           <div id="primary" class="clear-block">
-            <?php //print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
-            <?php print $navbar; ?>
+            <?php print theme('links', $primary_links, array('class' => 'links primary-links')); ?>
+            <?php //print $navbar; ?>
           </div>
         <?php endif; ?>
 

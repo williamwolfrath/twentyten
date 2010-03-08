@@ -82,6 +82,40 @@ ul.nice-menu li ul li a { text-indent: 5px; }
 
 
 
+/* @group primary links
+  ------------------------------*/
+ul.primary-links, ul.primary-links ul {
+    background: transparent;
+}
+ul.primary-links li {
+    background: transparent;
+    border: none;
+    float: left;
+    padding: 0;
+}
+ul.primary-links { width: 100%; padding-top: 10px; }
+ul.primary-links li { height: 37px; }
+ul.primary-links li.menu-item-1 { width: 157px; margin-right: 6px; }
+ul.primary-links li.menu-item-2 { width: 145px; margin-right: 6px; }
+ul.primary-links li.menu-item-3 { width: 118px; margin-right: 6px; }
+ul.primary-links li.menu-item-4 { width: 261px; }
+ul.primary-links li a { display: block; height: 37px; text-indent: -2000px; padding: 0; }
+ul.primary-links li.menu-item-1 a { background: #ffffff url(images/menu-blog.jpg) 50% 50% no-repeat; }
+ul.primary-links li.menu-item-2 a { background: #ffffff url(images/menu-media.jpg) 50% 50% no-repeat; }
+ul.primary-links li.menu-item-3 a { background: #ffffff url(images/menu-rec.jpg) 50% 50% no-repeat; }
+ul.primary-links li.menu-item-4 a { background: #ffffff url(images/menu-webdev.jpg) 50% 50% no-repeat; }
+
+ul.primary-links li.menu-item-3 ul li a { background: transparent; }
+
+ul.primary-links li.menuparent ul, #header-region ul.primary-links li.menuparent ul,
+ul.primary-links li.menuparent ul li {
+    width: 100%;
+}
+ul.primary-links li ul li a { text-indent: 5px; }
+
+
+
+
 
 
 /* @group main
@@ -171,3 +205,11 @@ h1#page-title { font-weight: normal; margin-bottom: 20px; background: transparen
     background: black;
     color: white;
 }
+#footer ul.menu {
+    width: 800px;
+    margin: auto;
+    padding-top: 20px;
+    list-style-type: none;
+    list-style-image: none;
+}
+#footer a:link, #footer a:visited { color: #e9e9e9; }
