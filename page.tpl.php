@@ -166,7 +166,7 @@
           <?php if ($taxonomy_img): ?>
               <div class='float-right'><?php print $taxonomy_img; ?></div>
           <?php endif; ?>
-          <?php if (!empty($title)): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+         
           
           <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
           <?php if (!empty($messages)): print $messages; endif; ?>
@@ -185,11 +185,12 @@
 
       </div></div> <!-- /main-squeeze /main -->
 
-      <?php if (!empty($right)): ?>
+      <?php //if (!empty($right)): ?>
         <div id="sidebar-right" class="column sidebar">
+          <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')); ?>
           <?php print $right; ?>
         </div> <!-- /sidebar-right -->
-      <?php endif; ?>
+      <?php //endif; ?>
 
     </div> <!-- /container -->
   </div> </div><!-- page inner -->

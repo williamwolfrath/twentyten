@@ -1,5 +1,5 @@
 <?php
-// $Id: node.tpl.php,v 1.4 2008/01/25 21:21:44 goba Exp $
+// $Id: node.tpl.php,v 1.4.2.1 2009/08/10 10:48:33 goba Exp $
 
 /**
  * @file node.tpl.php
@@ -15,7 +15,7 @@
  *   format_date()).
  * - $links: Themed links like "Read more", "Add new comment", etc. output
  *   from theme_links().
- * - $name: Themed username of node author output from theme_user().
+ * - $name: Themed username of node author output from theme_username().
  * - $node_url: Direct url of the current node.
  * - $terms: the themed list of taxonomy term links output from theme_links().
  * - $submitted: themed submission information output from
@@ -48,50 +48,16 @@
  * @see template_preprocess_node()
  */
 ?>
-<?php log_debug('node: ', $node); ?>
 <div id="node-<?php print $node->nid; ?>" class="node<?php if ($sticky) { print ' sticky'; } ?><?php if (!$status) { print ' node-unpublished'; } ?> clear-block">
 
-  <div class='node-left'>
 
-    <?php if (!$page): ?>
-      <div class="meta">
-        
-        <?php print $picture ?>
-        <div class="submitted">
-          <?php print $name; ?><br/>
-          <?php print format_date($node->created, 'custom', 'm/d/y'); ?>
-        </div>
-        </div>
-    <?php endif; ?>
- 
+<?php if (!$page): ?>
+  <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+<?php endif; ?>
+
+  <div class="content">
+    <?php print $content ?>
   </div>
- 
 
-  <div class='node-right'>
-
-    <div class="node-content-wrapper">
-    
-      <?php //if (!$page): ?>
-        <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-        <?php print $node->content['taxonomy_image']['#value']; ?>
-        <?php if ($page): ?>
-            <div class="submitted">
-              posted by <?php print $name; ?> on <?php print format_date($node->created, 'custom', 'm/d/y'); ?>
-            </div>
-        <?php endif; ?>
-      <?php //endif; ?>
-    
-      <div class="content">
-        <?php print $content ?>
-      </div>
-      
-
-      <?php print $links; ?>
-
-    </div> <!-- node-content-wrapper --> 
- 
-  </div>
-  
-
- 
+  <?php print $links; ?>
 </div>

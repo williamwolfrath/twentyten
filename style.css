@@ -4,9 +4,12 @@
 }
 
 a:link, a:visited { text-decoration: none; color: #022a46; }
+img {
+    margin: 5px;
+}
 
 body {
-    background: #ffffff url(images/header-tile-dark.jpg) repeat-x;
+    background: #544548 url(images/header-tile-dark2.jpg) repeat-x;
     font-family: Tahoma, Helvetica, Arial, sans-serif;
     font-size: 10pt;
     font-weight: normal;
@@ -100,10 +103,17 @@ ul.primary-links li.menu-item-2 { width: 145px; margin-right: 6px; }
 ul.primary-links li.menu-item-3 { width: 118px; margin-right: 6px; }
 ul.primary-links li.menu-item-4 { width: 261px; }
 ul.primary-links li a { display: block; height: 37px; text-indent: -2000px; padding: 0; }
-ul.primary-links li.menu-item-1 a { background: #ffffff url(images/menu-blog.jpg) 50% 50% no-repeat; }
-ul.primary-links li.menu-item-2 a { background: #ffffff url(images/menu-media.jpg) 50% 50% no-repeat; }
-ul.primary-links li.menu-item-3 a { background: #ffffff url(images/menu-rec.jpg) 50% 50% no-repeat; }
-ul.primary-links li.menu-item-4 a { background: #ffffff url(images/menu-webdev.jpg) 50% 50% no-repeat; }
+ul.primary-links li.menu-item-1 a {
+    background: #ffffff url(images/menu-blog-hover.jpg) 50% 0 no-repeat;
+}
+ul.primary-links li.menu-item-2 a { background: #ffffff url(images/menu-media-hover.jpg) 50% 0 no-repeat; }
+ul.primary-links li.menu-item-3 a { background: #ffffff url(images/menu-rec-hover.jpg) 50% 0 no-repeat; }
+ul.primary-links li.menu-item-4 a { background: #ffffff url(images/menu-webdev-hover.jpg) 50% 0 no-repeat; }
+ul.primary-links li.menu-item-1 a:hover,
+ul.primary-links li.menu-item-2 a:hover,
+ul.primary-links li.menu-item-3 a:hover,
+ul.primary-links li.menu-item-4 a:hover ,
+ul.primary-links li.active-trail a { background-position: 50% -37px; }
 
 ul.primary-links li.menu-item-3 ul li a { background: transparent; }
 
@@ -118,13 +128,19 @@ ul.primary-links li ul li a { text-indent: 5px; }
 
 
 
+
 /* @group main
   ---------------------*/
 #main {
-    padding: 40px 0 30px 0;
+    padding: 10px 0 30px 0;
     min-height: 300px;
+    width: 700px;
+    float: left;
 }
-
+#main-squeeze {
+    padding: 0 10px 0 15px;
+    background: #ffffff url(images/horizontal-divider-brown.jpg) top right no-repeat;
+}
 
 .views-row-odd, .views-row-even {
     padding: 50px 0 60px 0;
@@ -133,7 +149,15 @@ ul.primary-links li ul li a { text-indent: 5px; }
 
 
 
-
+body.sidebar-right #main {
+    width: 700px;
+    float: left;
+}
+body.sidebar-right #sidebar-right {
+    width: 190px;
+    float: left;
+    padding: 10px;
+}
 
 
 
@@ -143,9 +167,12 @@ ul.primary-links li ul li a { text-indent: 5px; }
 /* @group panels
   ------------------------*/
 #main .panel-2col .panel-col-first {
-    width: 700px;
-    background: #ffffff url(images/horizontal-divider-brown.jpg) top right no-repeat;
+    width: 685px;
+    /*background: #ffffff url(images/horizontal-divider-brown.jpg) top right no-repeat;*/
     float: left;
+}
+body.node-type-blog-post #main .panel-2col .panel-col-first  {
+    background: #ffffff;
 }
 .panel-2col .panel-col-first .inside {
     /*padding: 10px;*/
@@ -156,36 +183,56 @@ ul.primary-links li ul li a { text-indent: 5px; }
 
 
 
+
+
 /* @group node
   ---------------------*/
 .node .node-left {
     width: 80px;
     float: left;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .node .node-right {
     float: left;
-    width: 580px;
+    width: 575px;
+    padding-right: 5px;
+}
+body.node-type-blog-post .node .node-right {
+    width: 670px;
+    padding: 0 10px 0 0;
+}
+.node .node-right-sidebar {
+    width: 190px;
+    float: left;
+    padding: 0 10px;
+    text-align: center;
 }
 .node .content {
     /*padding-left: 100px;*/
     clear: both;
+    position: relative;
+    overflow: auto;
+}
+body.page-node .node .content { margin-top: 20px; }
+body.node-type-blog-post .node .content {
+    margin-top: 20px;
 }
 .node .content img {
     margin: 0 10px 10px;
     border: 2px solid #222222;
 }
-.node h2 {
+.node h2, body.node-type-blog-post h2 {
     background: transparent url(images/horizontal-divider-blue.jpg) bottom left no-repeat;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
     font-size: 18pt;
     width: 500px;
     float: left;
     padding-bottom: 8px;
     font-weight: normal;
 }
-h1#page-title { font-weight: normal; margin-bottom: 20px; background: transparent url(images/horizontal-divider-blue.jpg) bottom left no-repeat; }
-.node .meta { padding: 3px 5px; font-size: 8pt; }
+h1#page-title { font-weight: normal; margin-bottom: 20px; background: transparent url(images/horizontal-divider-blue.jpg) bottom left no-repeat; width: 680px; }
+.node .meta { padding: 3px; font-size: 8pt; }
 .node .meta a:link,
 .node .meta a:visited {
     color: #000000;   
@@ -193,7 +240,43 @@ h1#page-title { font-weight: normal; margin-bottom: 20px; background: transparen
 .float-right {
     float: right;
 }
+.submitted {
+    color: #666666;
+    font-style:italic;
+    clear: both;
+}
+.submitted { font-size: 9pt; }
+.submitted a:link, .submitted a:visited {
+    color: #555555;
+    text-decoration: underline;
+}
+.submitted a:hover { text-decoration: none; }
+.view-blog-posts .submitted { text-align: center; }
+/* lists */
+body.page-node .node ul { padding: 10px; list-style-type: circle; list-style-position: inside; }
 
+
+
+
+
+
+
+
+
+
+
+
+/* @group taxonomy
+  ----------------------*/
+.node .taxonomy-images {
+    width: 60px;
+    height: 60px;
+    float: left;
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: -40px;*/
+}
+.node .content .taxonomy-images { display: none; } /* hide the default one, I'm positioning it myself */
 
 
 
